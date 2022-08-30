@@ -34,10 +34,14 @@
             <div id="phone-container" class="row row-cols-1 row-cols-md-3 g-4">
 
             </div>
+            <div class="d-none mt-4 p-5 text-center" id="no-phone">
+                <h3 class="text-danger">No Item Found. Please Try Another Search.</h3>
+            </div>
+            <div class="p-5 text-center d-none" id="show-all">
+                <!-- <button id="btn-show-all" class="btn btn-outline-success">Show All</button> -->
+                <div id="btn-show-all" class="btn btn-outline-success">Show All</div>
+            </div>
         </section>
-        <div class="d-none mt-4 p-5 text-center" id="no-phone">
-            <h3 class="text-danger">No Item Found. Please Try Another Search.</h3>
-        </div>
         <!-- loader -->
         <section id="loader" class="d-none">
             <div class="text-center mt-5">
@@ -45,6 +49,27 @@
                     <span class="visually-hidden">Loading...</span>
                 </div> -->
                 <img src="images/progress-icon-gif-1.jpg" class="w-25" alt="">
+            </div>
+        </section>
+
+        <section>
+            <!-- Modal -->
+            <div class="modal fade" id="phoneDetailsModal" tabindex="-1" aria-labelledby="phoneDetailsModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="phoneDetailsModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="phone-details" class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
