@@ -10,10 +10,10 @@ const displayPhones = (phones, dataLimit) => {
     const phoneContainer = document.getElementById('phone-container');
     phoneContainer.textContent = '';
 
-    // Display 10 phones only
+    // Display 9 phones only
     const showAll = document.getElementById('show-all');
-    if (dataLimit && phones.length > 10) {
-        phones = phones.slice(0, 10);
+    if (dataLimit && phones.length > 9) {
+        phones = phones.slice(0, 9);
         showAll.classList.remove('d-none');
     }
     else {
@@ -55,12 +55,12 @@ const processSearch = (dataLimit) => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
     phoneLoad(searchText, dataLimit);
-    searchField.value = '';
+    // searchField.value = '';
 }
 
 //Handle search button click
 document.getElementById('btn-search').addEventListener('click', function () {
-    processSearch(10);
+    processSearch(9);
 })
 
 //search inputfield enter key handler
